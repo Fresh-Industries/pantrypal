@@ -1,0 +1,15 @@
+{
+  "name": "ucp-prototype",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:server": "npm --workspace apps/merchant-server run dev",
+    "dev:frontend": "npm --workspace apps/dish-feed-frontend run dev",
+    "build:frontend": "npm --workspace apps/dish-feed-frontend run build",
+    "preview:frontend": "npm --workspace apps/dish-feed-frontend run preview",
+    "eval:zero-edit": "node apps/dish-feed-frontend/scripts/zero_edit_rate.mjs",
+    "test": "npm --workspace apps/merchant-server run test"
+  }
+}

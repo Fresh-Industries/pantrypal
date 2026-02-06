@@ -1,0 +1,19 @@
+{
+  "name": "dish-feed-merchant-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node src/server.js",
+    "dev:bigbox": "UCP_STORE_PROFILE=bigbox PORT=8182 node src/server.js",
+    "dev:local": "UCP_STORE_PROFILE=local PORT=8282 node src/server.js",
+    "start": "node src/server.js",
+    "import:grocery": "node scripts/import_grocery.mjs",
+    "test": "node --test test/**/*.test.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
